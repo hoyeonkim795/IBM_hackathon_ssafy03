@@ -31,9 +31,10 @@
   <body>
     <nav class="navbar navbar-light bg-light">
       <h1><a class="navbar-brand" href="{% url 'stt:create' %}">CREATE</a></h1>
+      <h1><a class="navbar-brand" href="{% url 'stt:record' %}">RECORD</a></h1>
     </nav>
     <h1>안녕하세요</h1>
-
+    
     <button onclick="gogo(); start()">PLAY</button>
     <button onclick="gogo_tts()">TTS_PLAY</button>
     <h1 class="typing-txt">{{ keywords }}</h1>
@@ -42,17 +43,17 @@
     <!-- <p class="typing"></p> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-      var corona = new Audio("../../../media/timeline_audio/corona.wav");
+      var corona = new Audio("../../../media/timeline_audio/flood1.mp3");
       function gogo() {
         // 소리 재생 함수
         corona.currentTime = 0;
         corona.play();
       }
-      var response = new Audio("../../../media/timeline_audio/hello_world.wav");
-      function gogo_tts() {
-        response.currentTime = 0;
-        response.play();
-      }
+      // var response = new Audio("../../../media/timeline_audio/hello_world.wav");
+      // function gogo_tts() {
+      //   response.currentTime = 0;
+      //   response.play();
+      // }
 
       function start() {
         // 타이핑 함수
@@ -64,9 +65,9 @@
         if (typingBool == false) {
           // 타이핑이 진행되지 않았다면
           typingBool = true;
-          var tyInt = setInterval(typing, 200); // 반복동작
+          var tyInt = setInterval(typing, 100); // 반복동작
         }
-
+        
         function typing() {
           if (typingIdx < typingTxt.length) {
             // 타이핑될 텍스트 길이만큼 반복
@@ -74,9 +75,18 @@
             typingIdx++;
           } else {
             clearInterval(tyInt); //끝나면 반복종료
+            var response = new Audio("../../../media/timeline_audio/hello_world.wav");
+            response.currentTime = 0;
+            response.play();
+            
           }
+ 
         }
+        
+
       }
+      
+
     </script>
   </body>
 </html>

@@ -39,7 +39,7 @@ def start_tts(tts, filename, text):
         audio_file.write(
             tts.synthesize(
                 text,
-                voice='ko-KR_YunaVoice',
+                voice='en-US_MichaelV3Voice',
                 accept='audio/wav'        
             ).get_result().content)
         

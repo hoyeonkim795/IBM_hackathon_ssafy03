@@ -9,11 +9,12 @@ from .forms import AudioForm
 # Create your views here.
 
 def index(request):
+
     stt_api_key = '_sX-7ZuY39EjyTVYHxe-7tl04k9eVIIbJ7846MZO2BMQ'
     stt_api_url = 'https://api.kr-seo.speech-to-text.watson.cloud.ibm.com/instances/f568fcb0-c3d4-4f13-b89e-d17b67d5adc2'
     tts_api_key = 'zyhuldAdd4JA6bjKqcfrVS9RcQ3bVYZhcOgBA9KkaJRB'
     tts_api_url = 'https://api.kr-seo.text-to-speech.watson.cloud.ibm.com/instances/c07cdd3a-f37f-4b6d-8696-c7cab643d85c'
-    filename = 'corona.wav'
+    filename = 'flood1.mp3'
     authenticator = mymodule_stt.authenticate(stt_api_key)
     speech_to_text = mymodule_stt.stt(authenticator)
     mymodule_stt.set_url(speech_to_text, stt_api_url)
