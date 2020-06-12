@@ -35,7 +35,7 @@
     <h1>안녕하세요</h1>
 
     <button onclick="gogo(); start()">PLAY</button>
-    <button onclick="gogo_tts()">TTS_PLAY</button>
+    <!-- <button onclick="gogo_tts()">TTS_PLAY</button> -->
     <h1 class="typing-txt">{{ keywords }}</h1>
     <p class="typing"></p>
 
@@ -43,15 +43,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
       var corona = new Audio("../../../media/timeline_audio/corona.wav");
+      // var response = new Audio("../../../media/timeline_audio/hello_world.wav");
+      // var txt = $(".typing-txt").text();
+      // const delay_time = txt.length * 200;
+      // function gogo_tts() {
+      //   response.currentTime = 0;
+      //   response.play();
+      // }
+      var myTime = setTimeout(gogo_tts, delay_time);
       function gogo() {
         // 소리 재생 함수
         corona.currentTime = 0;
         corona.play();
-      }
-      var response = new Audio("../../../media/timeline_audio/hello_world.wav");
-      function gogo_tts() {
-        response.currentTime = 0;
-        response.play();
       }
 
       function start() {
@@ -74,6 +77,11 @@
             typingIdx++;
           } else {
             clearInterval(tyInt); //끝나면 반복종료
+            var response = new Audio(
+              "../../../media/timeline_audio/hello_world.wav"
+            );
+            response.currentTime = 0;
+            response.play();
           }
         }
       }
