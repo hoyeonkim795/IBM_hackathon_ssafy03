@@ -16,7 +16,8 @@
       <p class="typing1"></p>
     </div>
   </div>
-  <div
+  <div class="ep">
+    <div
       class="context"
       style="
         background-image: url('{% static 'images/phone.png' %}');
@@ -31,7 +32,8 @@
       <p class="typing2"></p>
     </div>
   </div>
-  <div
+  <div class="ep">
+    <div
       class="context"
       style="
         background-image: url('{% static 'images/phone.png' %}');
@@ -47,6 +49,7 @@
     </div>
   </div>
 </div>
+
 <!-- <p class="typing"></p> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
@@ -75,7 +78,7 @@
     typingTxt = typingTxt.split(""); // 한글자씩 자른다.
 
     if (typingBool == false) {
-      sleep(2000);
+      sleep(1000);
       // 타이핑이 진행되지 않았다면
       typingBool = true;
       var tyInt = setInterval(typing, 75); // 반복동작
@@ -111,7 +114,7 @@
     typingTxt = typingTxt.split(""); // 한글자씩 자른다.
 
     if (typingBool == false) {
-      sleep(2000);
+      sleep(1000);
       // 타이핑이 진행되지 않았다면
       typingBool = true;
       var tyInt = setInterval(typing, 60); // 반복동작
@@ -135,6 +138,7 @@
   var audio3 = new Audio("../../../media/timeline_audio/corona_blue.wav");
   function gogo3() {
     // 소리 재생 함수
+    sleep(1000);
     audio3.currentTime = 0;
     audio3.play();
   }
@@ -162,6 +166,7 @@
         clearInterval(tyInt); //끝나면 반복종료
 
         var response = new Audio("../../../media/timeline_audio/answer3.wav");
+        sleep(1000);
         response.currentTime = 0;
         response.play();
       }
