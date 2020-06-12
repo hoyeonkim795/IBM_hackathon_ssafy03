@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if request.resolver_match.url_name == 'create' %}
+    <h1>CREATE</h1>
+    {% else %}
+        <h1>UPDATE</h1>
+    {% endif %}
+
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">CREATE</button>
+
+    </form>
+    {% if request.resolver_match.url_name == 'create' %}
+        <a href="{% url 'stt:index' %}">back</a>
+
+    {% endif %}
+
+</body>
+</html>
