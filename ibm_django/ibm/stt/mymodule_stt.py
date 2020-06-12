@@ -47,7 +47,7 @@ def set_url(stt, api_url):
 
 # open 함수화
 def start_stt(stt, filename):
-    with open(join(dirname(__file__), './', filename), 'rb') as audio_file:
+    with open(join(dirname(__file__), '../media/timeline_audio', filename), 'rb') as audio_file:
         speech_recognition_results = stt.recognize(
         audio=audio_file,
         content_type='audio/wav',

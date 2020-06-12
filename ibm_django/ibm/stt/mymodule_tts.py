@@ -35,7 +35,7 @@ def set_url(tts, api_url):
 
 
 def start_tts(tts, filename, text):
-    with open(join(dirname(__file__), './', filename), 'wb') as audio_file:
+    with open(join(dirname(__file__), '../media/timeline_audio', filename), 'wb') as audio_file:
         audio_file.write(
             tts.synthesize(
                 text,
