@@ -50,7 +50,7 @@ def start_stt(stt, filename):
     with open(join(dirname(__file__), '../media/timeline_audio', filename), 'rb') as audio_file:
         speech_recognition_results = stt.recognize(
         audio=audio_file,
-        content_type='audio/mp3',
+        content_type='audio/wav',
         model='en-US_ShortForm_NarrowbandModel',
         word_alternatives_threshold=0.9,
     

@@ -9,54 +9,159 @@
       "
     >
       <h3>scenario 1</h3>
-      <a class="speak" onclick="gogo(); start()"
+      <a class="speak" onclick="gogo1(); start1()"
         ><img src="{% static 'images/speak.png' %}"
       /></a>
-      <h1 class="typing-txt">{{ keywords }}</h1>
-      <p class="typing"></p>
+      <h1 class="typing-txt1">{{ keyword1 }}</h1>
+      <p class="typing1"></p>
+    </div>
+  </div>
+  <div
+      class="context"
+      style="
+        background-image: url('{% static 'images/phone.png' %}');
+        background-repeat: no-repeat;
+      "
+    >
+      <h3>scenario 2</h3>
+      <a class="speak" onclick="gogo2(); start2()"
+        ><img src="{% static 'images/speak.png' %}"
+      /></a>
+      <h1 class="typing-txt2">{{ keyword2 }}</h1>
+      <p class="typing2"></p>
+    </div>
+  </div>
+  <div
+      class="context"
+      style="
+        background-image: url('{% static 'images/phone.png' %}');
+        background-repeat: no-repeat;
+      "
+    >
+      <h3>scenario 3</h3>
+      <a class="speak" onclick="gogo3(); start3()"
+        ><img src="{% static 'images/speak.png' %}"
+      /></a>
+      <h1 class="typing-txt3">{{ keyword3 }}</h1>
+      <p class="typing3"></p>
     </div>
   </div>
 </div>
 <!-- <p class="typing"></p> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
-  var corona = new Audio("../../../media/timeline_audio/earthquake1.mp3");
-  // var response = new Audio("../../../media/timeline_audio/hello_world.wav");
-  // var txt = $(".typing-txt").text();
-  // const delay_time = txt.length * 200;
-  // function gogo_tts() {
-  //   response.currentTime = 0;
-  //   response.play();
-  // }
-  // var myTime = setTimeout(gogo_tts, delay_time);
-  function gogo() {
-    // 소리 재생 함수
-    corona.currentTime = 0;
-    corona.play();
+  function sleep(num) {
+    //[1/1000초]
+    var now = new Date();
+    var stop = now.getTime() + num;
+    while (true) {
+      now = new Date();
+      if (now.getTime() > stop) return;
+    }
   }
 
-  function start() {
+  var audio1 = new Audio("../../../media/timeline_audio/washington_fire.wav");
+  function gogo1() {
+    // 소리 재생 함수
+    audio1.currentTime = 0;
+    audio1.play();
+  }
+
+  function start1() {
     // 타이핑 함수
     var typingBool = false;
     var typingIdx = 0;
-    var typingTxt = $(".typing-txt").text(); // 타이핑될 텍스트를 가져온다
+    var typingTxt = $(".typing-txt1").text(); // 타이핑될 텍스트를 가져온다
     typingTxt = typingTxt.split(""); // 한글자씩 자른다.
 
     if (typingBool == false) {
+      sleep(2000);
       // 타이핑이 진행되지 않았다면
       typingBool = true;
-      var tyInt = setInterval(typing, 70); // 반복동작
+      var tyInt = setInterval(typing, 75); // 반복동작
     }
 
     function typing() {
       if (typingIdx < typingTxt.length) {
         // 타이핑될 텍스트 길이만큼 반복
-        $(".typing").append(typingTxt[typingIdx]); // 한글자씩 이어준다.
+        $(".typing1").append(typingTxt[typingIdx]); // 한글자씩 이어준다.
         typingIdx++;
       } else {
         clearInterval(tyInt); //끝나면 반복종료
 
-        var response = new Audio("../../../media/timeline_audio/answer.wav");
+        var response = new Audio("../../../media/timeline_audio/answer1.wav");
+        response.currentTime = 0;
+        response.play();
+      }
+    }
+  }
+
+  var audio2 = new Audio("../../../media/timeline_audio/newyork_flood.wav");
+  function gogo2() {
+    // 소리 재생 함수
+    audio2.currentTime = 0;
+    audio2.play();
+  }
+
+  function start2() {
+    // 타이핑 함수
+    var typingBool = false;
+    var typingIdx = 0;
+    var typingTxt = $(".typing-txt2").text(); // 타이핑될 텍스트를 가져온다
+    typingTxt = typingTxt.split(""); // 한글자씩 자른다.
+
+    if (typingBool == false) {
+      sleep(2000);
+      // 타이핑이 진행되지 않았다면
+      typingBool = true;
+      var tyInt = setInterval(typing, 60); // 반복동작
+    }
+
+    function typing() {
+      if (typingIdx < typingTxt.length) {
+        // 타이핑될 텍스트 길이만큼 반복
+        $(".typing2").append(typingTxt[typingIdx]); // 한글자씩 이어준다.
+        typingIdx++;
+      } else {
+        clearInterval(tyInt); //끝나면 반복종료
+
+        var response = new Audio("../../../media/timeline_audio/answer2.wav");
+        response.currentTime = 0;
+        response.play();
+      }
+    }
+  }
+
+  var audio3 = new Audio("../../../media/timeline_audio/corona_blue.wav");
+  function gogo3() {
+    // 소리 재생 함수
+    audio3.currentTime = 0;
+    audio3.play();
+  }
+
+  function start3() {
+    // 타이핑 함수
+    var typingBool = false;
+    var typingIdx = 0;
+    var typingTxt = $(".typing-txt3").text(); // 타이핑될 텍스트를 가져온다
+    typingTxt = typingTxt.split(""); // 한글자씩 자른다.
+
+    if (typingBool == false) {
+      sleep(2000);
+      // 타이핑이 진행되지 않았다면
+      typingBool = true;
+      var tyInt = setInterval(typing, 60); // 반복동작
+    }
+
+    function typing() {
+      if (typingIdx < typingTxt.length) {
+        // 타이핑될 텍스트 길이만큼 반복
+        $(".typing3").append(typingTxt[typingIdx]); // 한글자씩 이어준다.
+        typingIdx++;
+      } else {
+        clearInterval(tyInt); //끝나면 반복종료
+
+        var response = new Audio("../../../media/timeline_audio/answer3.wav");
         response.currentTime = 0;
         response.play();
       }
