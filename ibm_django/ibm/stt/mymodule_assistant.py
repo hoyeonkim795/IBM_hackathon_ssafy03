@@ -20,7 +20,6 @@ def set_assistant(authenticator):
     return assistant
 
 
-#assistant.set_service_url('https://api.us-south.assistant.watson.cloud.ibm.com/instances/6d8c3435-9650-4202-af84-07fc845a4f34')
 
 
 def set_url(assistant, api_url):
