@@ -17,7 +17,6 @@ def tts(a):
     return speech_to_text
 
 
-#text_to_speech.set_service_url('https://api.kr-seo.text-to-speech.watson.cloud.ibm.com/instances/c07cdd3a-f37f-4b6d-8696-c7cab643d85c')
 
 def set_url(tts, api_url):
     tts.set_service_url(api_url)

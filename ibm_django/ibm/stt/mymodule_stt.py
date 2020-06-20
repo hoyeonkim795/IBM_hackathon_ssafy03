@@ -24,7 +24,6 @@ def stt(a):
 
 
 # 얘는 views.py에서 만들기
-# speech_to_text.set_service_url('https://api.kr-seo.speech-to-text.watson.cloud.ibm.com/instances/f568fcb0-c3d4-4f13-b89e-d17b67d5adc2')
 
 
 def set_url(stt, api_url):
