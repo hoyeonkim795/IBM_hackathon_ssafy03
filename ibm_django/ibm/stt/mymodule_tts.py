@@ -2,7 +2,6 @@ from os.path import join, dirname
 from ibm_watson import TextToSpeechV1
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 
-#authenticator = IAMAuthenticator('zyhuldAdd4JA6bjKqcfrVS9RcQ3bVYZhcOgBA9KkaJRB')
 
 def authenticate(k):
     authenticator = IAMAuthenticator(k)

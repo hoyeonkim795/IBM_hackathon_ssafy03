@@ -4,7 +4,7 @@ from ibm_watson import SpeechToTextV1
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 
 
-#authenticator = IAMAuthenticator('_sX-7ZuY39EjyTVYHxe-7tl04k9eVIIbJ7846MZO2BMQ')
+
 
 
 # authenticator 지정

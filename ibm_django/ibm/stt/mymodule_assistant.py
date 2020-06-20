@@ -2,7 +2,6 @@ import json
 from ibm_watson import AssistantV2
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 
-#authenticator = IAMAuthenticator('RP9pUsl_Z-uZd4fTxaa78wlivZ1rQhpL_XZOekDD1mjn')
 
 def authenticate(api_key):
     authenticator = IAMAuthenticator(api_key)
@@ -29,7 +28,7 @@ def set_url(assistant, api_url):
     return assistant
 
 # response = assistant.message_stateless(
-#     assistant_id='a212691b-e3f4-41ee-9015-20e2370aee5f',
+#     assistant_id='',
 #     input={
 #         'message_type': 'text',
 #         'text': 'tell a joke'
