@@ -2,12 +2,14 @@ import json
 from ibm_watson import AssistantV2
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 
+#authenticator = IAMAuthenticator('RP9pUsl_Z-uZd4fTxaa78wlivZ1rQhpL_XZOekDD1mjn')
 
 def authenticate(api_key):
     authenticator = IAMAuthenticator(api_key)
     return authenticator
 
 # assistant = AssistantV2(
+    # assistant_id='0f1acf04-bddb-4195-b475-fdea90a92179',
 #     version='2020-04-01',
 #     authenticator = authenticator
 # )

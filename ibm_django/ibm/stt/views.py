@@ -11,7 +11,13 @@ from .forms import AudioForm
 # Create your views here.
 
 def index(request):
-
+    stt_api_key = '_sX-7ZuY39EjyTVYHxe-7tl04k9eVIIbJ7846MZO2BMQ'
+    stt_api_url = 'https://api.kr-seo.speech-to-text.watson.cloud.ibm.com/instances/f568fcb0-c3d4-4f13-b89e-d17b67d5adc2'
+    tts_api_key = 'zyhuldAdd4JA6bjKqcfrVS9RcQ3bVYZhcOgBA9KkaJRB'
+    tts_api_url = 'https://api.kr-seo.text-to-speech.watson.cloud.ibm.com/instances/c07cdd3a-f37f-4b6d-8696-c7cab643d85c'
+    assistant_api_key = 'RP9pUsl_Z-uZd4fTxaa78wlivZ1rQhpL_XZOekDD1mjn'
+    assistant_api_url = 'https://api.us-south.assistant.watson.cloud.ibm.com/instances/6d8c3435-9650-4202-af84-07fc845a4f34'
+    assistant_id='0f1acf04-bddb-4195-b475-fdea90a92179'
 
     # 1번 키워드
     filename = 'washington_fire.wav'
