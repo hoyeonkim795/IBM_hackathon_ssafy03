@@ -1,6 +1,6 @@
 certifi==2020.4.5.2
 chardet==3.0.4
-Django==2.1.15
+Django==2.2.13
 ibm-cloud-sdk-core==1.5.1
 ibm-watson==4.5.0
 idna==2.9
